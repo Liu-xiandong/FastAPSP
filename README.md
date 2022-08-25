@@ -20,7 +20,7 @@ make all
 
 ## Usage
 
-Here are the basic useages of Fast APSP.
+Here are the basic usages of Fast APSP.
 
 ```shell
 ./EXE -f <graph> [options]
