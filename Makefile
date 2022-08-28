@@ -39,8 +39,8 @@ HIP_SOURCE :=./src/kernel/hip
 HIP_FILES := $(wildcard ./src/kernel/hip/*.cpp)
 
 # binary program
-MAIN_SOURCE=./src/benchmark
-BUILD=./builds
+MAIN_SOURCE=./src/app
+BUILD=./build
 STD=c++11
 CPP_FILES := $(wildcard ./src/utils/*.cpp)
 SRCS := $(wildcard $(MAIN_SOURCE)/*.cpp)
