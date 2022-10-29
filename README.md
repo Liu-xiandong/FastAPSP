@@ -9,7 +9,7 @@
  * Copyright (c) 2022 by liuxiandong liuxiandong@ncic.ac.cn, All Rights Reserved. 
 -->
 
-# Fast APSP
+# Geo-APSP
 The Fast APSP algorithm is used to solve the All-Pairs Shortest Paths (APSP) problem. The algorithm uses the divide and conquers strategy. First, divide the graph structure by METIS, and divide the input graph G into multiple subgraphs. Then the solution of the APSP problem is solved by computing the subgraph. The Fast APSP algorithm combines the SSSP algorithm and the Floyd-Warshall algorithm. Compared with the Part APSP algorithm, it eliminates the data dependence and communication between sub-graphs. The Fast APSP algorithm has achieved good performance in graphs with good properties.
 
 We tested a lot of sparse graph data in the Suite sparse matrix collection and network repository, and the Fast APSP algorithm showed better performance than other APSP algorithms.
