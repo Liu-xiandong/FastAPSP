@@ -1,15 +1,4 @@
-<!--
- * @Author: liuxiandong liuxiandong@ncic.ac.cn
- * @Date: 2022-08-29 00:12:38
- * @LastEditors: liuxiandong liuxiandong@ncic.ac.cn
- * @LastEditTime: 2022-08-29 00:15:35
- * @FilePath: \Fast-APSP\README.md
- * @Description: 
- * 
- * Copyright (c) 2022 by liuxiandong liuxiandong@ncic.ac.cn, All Rights Reserved. 
--->
-
-# Geo-APSP
+# Fast-APSP
 The Fast APSP algorithm is used to solve the All-Pairs Shortest Paths (APSP) problem. The algorithm uses the divide and conquers strategy. First, divide the graph structure by METIS, and divide the input graph G into multiple subgraphs. Then the solution of the APSP problem is solved by computing the subgraph. The Fast APSP algorithm combines the SSSP algorithm and the Floyd-Warshall algorithm. Compared with the Part APSP algorithm, it eliminates the data dependence and communication between sub-graphs. The Fast APSP algorithm has achieved good performance in graphs with good properties.
 
 We tested a lot of sparse graph data in the Suite sparse matrix collection and network repository, and the Fast APSP algorithm showed better performance than other APSP algorithms.
@@ -20,15 +9,13 @@ We tested a lot of sparse graph data in the Suite sparse matrix collection and n
  - METIS 5.1.0
  - cuda 10.1
  - Openmpi 4.0.2
- - hipcc 2.8
 
 ## Quickstart
 
 ```shell
 mkdir build
-cd ..
-make clean
-make all
+cd build
+cmake ..
 ```
 
 ## Usage
@@ -51,7 +38,7 @@ Here are the basic usages of Fast APSP.
 
 Here is a sample codes of APSP for graph luxembourg_osm. 
 
-run with `./build/singleNodeImproved_path -f luxembourg_osm -k 32 -direct false -weight false`:
+run with `./singleNodeExample -f luxembourg_osm -k 128 -direct false -weight false`:
 
 ## License
 All the libraryies, examples, and source codes of Fast APSP are released under [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0).
